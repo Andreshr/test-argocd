@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: hello
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hello
-        image: nginx:1.25
+        image: nginx:no-existe
         ports:
         - containerPort: 80
